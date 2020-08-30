@@ -121,6 +121,7 @@
 ### Optional configuration
 
 - If you want to use your custom domain to access admin page (e.g.: `http://mydomain.internal/admin/settings.php` instead of `http://pi.hole/admin/settings.php`), make sure `mydomain.internal` is assigned to `server_name` in `/etc/nginx/sites-available/default`. E.g.: `server_name mydomain.internal;`
+- Note that if you use a custom (your own) domainname, be sure to add CORS headers the right way in your server.conf file. See https://gist.github.com/jult/0b3e08c2128140cab17f0682270bc9fc for an example on how to pull this off. A short how-to is in the comments there.
 
 - If you want to use block page for any blocked domain subpage (aka Nginx 404), add this to Pi-hole server block in your Nginx configuration file:
 
